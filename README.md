@@ -1,6 +1,6 @@
 # Awesome SWE-Bench: A Comprehensive Survey of SWE-Bench Series Benchmarks
 
-> 本仓库系统梳理了自 2023 年 SWE-bench 发表以来衍生的 **27 篇 Benchmark 系列 工作**，涵盖原始基准、多语言扩展、多模态扩展、持续学习、性能优化、测试生成、数据合成、统一评测等多个维度。每篇均附有简介、关键信息、论文链接和配图。
+> 本仓库系统梳理了自 2023 年 SWE-bench 发表以来衍生的 **42 篇 Benchmark 系列 工作**，涵盖原始基准、多语言扩展、多模态扩展、持续学习、性能优化、测试生成、数据合成、统一评测、超长程任务、代码审查、安全、仓库探索、对话驱动等多个维度。每篇均附有简介、关键信息、论文链接和配图。
 >
 > 此外，本仓库还新增了 [**相关代码工作：Coding Agent 训练数据生态**](#相关代码工作coding-agent-训练数据生态) 章节，从**训练数据侧**梳理 2024–2026 间代码指令数据合成、数据清洗与质量过滤、Agent 轨迹数据三大方向的代表性工作，与评测侧的 Benchmark 形成互补。
 
@@ -37,6 +37,21 @@
 | 25 | [SWE-Bench Pro](#25-swe-bench-pro) | 高难度企业级 | 2025.09 | [2509.16941](https://arxiv.org/abs/2509.16941) |
 | 26 | [EnConda-Bench](#26-enconda-bench) | 环境配置 | 2025.10 | [2510.25694](https://arxiv.org/abs/2510.25694) |
 | 27 | [SWE-Compass](#27-swe-compass) | 统一评测框架 | 2025.11 | [2511.05459](https://arxiv.org/abs/2511.05459) |
+| 28 | [BeyondSWE](#28-beyondswe) | 跨仓库/知识范围扩展 | 2026.03 | [2603.03194](https://arxiv.org/abs/2603.03194) |
+| 29 | [PostTrainBench](#29-posttrainbench) | Agent 自动化后训练 | 2026.03 | [2603.08640](https://arxiv.org/abs/2603.08640) |
+| 30 | [FrontierSWE](#30-frontierswe) | 超长程前沿挑战 | 2026 | [frontierswe.com](https://www.frontierswe.com/) |
+| 31 | [SWE-Marathon](#31-swe-marathon) | 超长程项目级 | 2026.06 | [2606.07682](https://arxiv.org/abs/2606.07682) |
+| 32 | [OmniCode](#32-omnicode) | 多任务/多语言 | 2026.02 | [2602.02262](https://arxiv.org/abs/2602.02262) |
+| 33 | [FullStack-Agent](#33-fullstack-agent) | 全栈 Web 开发 | 2026.02 | [2602.03798](https://arxiv.org/abs/2602.03798) |
+| 34 | [Vision2Web](#34-vision2web) | 视觉网站开发 | 2026.03 | [2603.26648](https://arxiv.org/abs/2603.26648) |
+| 35 | [c-CRAB](#35-c-crab) | 代码审查 | 2026.03 | [2603.23448](https://arxiv.org/abs/2603.23448) |
+| 36 | [SWE-PRBench](#36-swe-prbench) | 代码审查质量 | 2026.03 | [2603.26130](https://arxiv.org/abs/2603.26130) |
+| 37 | [Beyond Isolated Tasks](#37-beyond-isolated-tasks) | 序列化软件演化 | 2026.04 | [2604.03035](https://arxiv.org/abs/2604.03035) |
+| 38 | [SWE-EVO](#38-swe-evo) | 长程软件演化 | 2025.12 | [2512.18470](https://arxiv.org/abs/2512.18470) |
+| 39 | [SWE-Explore](#39-swe-explore) | 仓库探索/定位 | 2026.06 | [2606.07297](https://arxiv.org/abs/2606.07297) |
+| 40 | [Dialogue SWE-Bench](#40-dialogue-swe-bench) | 对话驱动 | 2026.06 | [2606.13995](https://arxiv.org/abs/2606.13995) |
+| 41 | [Saving SWE-Bench](#41-saving-swe-bench) | 真实性/基准变异 | 2025.10 | [2510.08996](https://arxiv.org/abs/2510.08996) |
+| 42 | [SecureAgentBench](#42-secureagentbench) | 安全代码生成 | 2025.09 | [2509.22097](https://arxiv.org/abs/2509.22097) |
 
 ---
 
@@ -58,11 +73,23 @@ SWE-Bench 系列 Benchmark 生态
 │   ├── 8. SWE-Lancer (2025.02) ── 自由职业任务
 │   ├── 21. NoCode-bench (2025.07) ── 功能开发
 │   ├── 22. SWE-Perf (2025.07) ── 性能优化
-│   └── 23. SWE-QA (2025.09) ── 代码问答
+│   ├── 23. SWE-QA (2025.09) ── 代码问答
+│   ├── 28. BeyondSWE (2026.03) ── 跨仓库/知识范围扩展
+│   ├── 29. PostTrainBench (2026.03) ── Agent 自动化后训练
+│   ├── 32. OmniCode (2026.02) ── 多任务多语言
+│   ├── 33. FullStack-Agent (2026.02) ── 全栈 Web 开发
+│   ├── 34. Vision2Web (2026.03) ── 视觉网站开发
+│   └── 39. SWE-Explore (2026.06) ── 仓库探索/代码定位
+├── 代码审查 (Code Review)
+│   ├── 35. c-CRAB (2026.03) ── PR 审查（评论→测试）
+│   └── 36. SWE-PRBench (2026.03) ── AI 审查质量
 ├── 数据质量与评测严谨性
 │   ├── 6. SWE-Bench+ (2024.10) ── 数据泄露分析
 │   ├── 16. UTBoost (2025.06) ── 测试增强
-│   └── 17. SWE-Bench Illusion (2025.06) ── 记忆vs推理
+│   ├── 17. SWE-Bench Illusion (2025.06) ── 记忆vs推理
+│   └── 41. Saving SWE-Bench (2025.10) ── 基准变异/真实性
+├── 安全 (Security)
+│   └── 42. SecureAgentBench (2025.09) ── 安全代码生成
 ├── 数据生成与训练
 │   ├── 7. SWE-Gym (2024.12) ── 训练环境
 │   ├── 9. R2E-Gym (2025.04) ── 大规模训练环境
@@ -76,7 +103,13 @@ SWE-Bench 系列 Benchmark 生态
 │   ├── 24. LoCoBench (2025.09) ── 长上下文
 │   ├── 25. SWE-Bench Pro (2025.09) ── 企业级高难度
 │   ├── 26. EnConda-Bench (2025.10) ── 环境配置
-│   └── 27. SWE-Compass (2025.11) ── 统一评测
+│   ├── 27. SWE-Compass (2025.11) ── 统一评测
+│   └── 40. Dialogue SWE-Bench (2026.06) ── 对话驱动
+└── 超长程/软件演化
+    ├── 30. FrontierSWE (2026) ── 超长程前沿挑战
+    ├── 31. SWE-Marathon (2026.06) ── 超长程项目级（40–400 小时/任务）
+    ├── 37. Beyond Isolated Tasks (2026.04) ── 序列化软件演化
+    └── 38. SWE-EVO (2025.12) ── 长程软件演化
 ```
 
 ---
@@ -536,6 +569,204 @@ SWE-Bench 系列 Benchmark 生态
 
 ---
 
+### 28. BeyondSWE
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | BeyondSWE: Can Current Code Agent Survive Beyond Single-Repo Bug Fixing? |
+| **作者** | Guoxin Chen, Fanzhe Meng, Jiale Zhao, Minghao Li, Daixuan Cheng, ..., Kai Jia, Ji-Rong Wen |
+| **机构** | 中国人民大学高瓴人工智能学院, AweAI Team |
+| **发表** | 2026.03 |
+| **链接** | [arXiv](https://arxiv.org/abs/2603.03194) \| [Code](https://github.com/AweAI-Team/BeyondSWE) \| [Website](https://aweai-team.github.io/BeyondSWE/) |
+
+**简介：** BeyondSWE 指出现有 Code Agent 基准大多只评测**单一目标仓库内的局部 issue 修复**，而忽视了大量需要外部知识或更广解决范围的真实软件工程任务。它沿两个维度——**知识范围（Knowledge Scope）** 和 **解决范围（Resolution Scope）**——扩展评测，包含 **500 个真实世界实例**，分为四种任务设置：**CrossRepo**（跨仓库，需查阅外部链接/资源）、**DomainFix**（科学领域专精，与 11 位领域专家合作，覆盖天文、生物信息、量子物理等）、**DepMigrate**（依赖驱动的全代码库迁移，如 Pydantic v1→v2）、**Doc2Repo**（从文档构建完整仓库）。实验发现即使前沿模型成功率也**停滞在 45% 以下**。团队还提出 **SearchSWE** 框架，将深度网络搜索与编码能力结合（含防作弊机制：过滤指向目标仓库的 URL、擦除目标提交后的 commit 记录），但发现"搜索更多 ≠ 搜索更好"——无关检索引入的噪声反而会损害代码生成。
+
+---
+
+### 29. PostTrainBench
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | PostTrainBench: Can LLM Agents Automate LLM Post-Training? |
+| **作者** | Ben Rank, Hardik Bhatnagar, Ameya Prabhu, Shira Eisenberg, Karina Nguyen, Matthias Bethge, Maksym Andriushchenko |
+| **发表** | 2026.03 |
+| **链接** | [arXiv](https://arxiv.org/abs/2603.08640) \| [OpenReview](https://openreview.net/pdf?id=FJKOIxkUxo) |
+
+**简介：** PostTrainBench 把评测视角从"写代码/修 bug"推进到 **Agent 能否自主完成 LLM 后训练（post-training）** 这一 AI 研发自动化的核心环节。任务要求前沿 Agent（如基于 Claude Code 的方案）在**有界算力约束下（每个任务 10 小时、单张 H100 GPU）** 优化某个基础 LLM 在特定基准上的表现，全程不提供预定义策略，Agent 需自行联网查资料、跑实验、整理数据。结果显示当前最佳 Agent 仅达 **23.2%**，显著落后于官方指令微调模型的 51.1%（个别场景可反超，如 GPT-5.1 Codex Max 在 BFCL 上用 Gemma-3-4B 达 89%）。更重要的是论文揭示了多种**奖励操纵（reward hacking）** 行为——在测试集上训练、直接下载现成微调检查点冒充自训练、擅自使用发现的 API 密钥生成合成数据——凸显此类系统能力增强时**严格沙箱隔离**的重要性。
+
+---
+
+### 30. FrontierSWE
+
+| 项目 | 信息 |
+|------|------|
+| **类型** | 超长程（ultra long-horizon）前沿编码挑战基准 |
+| **机构** | Proximal Labs |
+| **发表** | 2026 |
+| **链接** | [Website](https://www.frontierswe.com/) \| [Code](https://github.com/Proximal-Labs/frontier-swe) |
+
+**简介：** FrontierSWE 是 Proximal Labs 推出的**超长程编码 Agent 基准**，专注于业界最困难的超长周期技术挑战。其任务并非局部补丁，而是**从零构建复杂软件系统或重新实现**，覆盖**实现任务（implementation）、性能工程（performance engineering）、机器学习研究（ML research）** 三类，涵盖性能工程、计算科学、ML 研究等领域，问题均来自学术界与工业界合作伙伴收集的真实难题。该基准同时作为 Prime Intellect Environment 提供，可用于评估与训练前沿模型。它代表了 SWE 评测从"小时级 issue"迈向"天级/项目级前沿研究工程"的趋势。
+
+---
+
+### 31. SWE-Marathon
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | SWE-Marathon: Can Agents Autonomously Complete Ultra-Long-Horizon Software Work? |
+| **作者** | Rishi Desai, Jesse Hu, Joan Cabezas, Neel Harsola, et al. |
+| **机构** | Abundant（联合 Stanford、Harvard、UWaterloo 等多机构） |
+| **发表** | 2026.06 |
+| **链接** | [arXiv](https://arxiv.org/abs/2606.07682) \| [Code](https://github.com/abundant-ai/swe-marathon) \| [Website](https://www.swemarathon.org/) |
+
+**简介：** SWE-Marathon 是面向**超长程（ultra-long-horizon）项目级软件工作**的基准，难度来源于"持续的工程工作本身"而非孤立的补丁定位。它包含 **20 个长程任务**，分四大类：库克隆与复现（8）、产品克隆/全栈应用（5）、机器学习工程（5）、算法与优化（2），典型任务如"将 Kubernetes 从 Go 移植到 Rust""用 Rust 构建 C 编译器""构建 Excel/Slack/Stripe 克隆"，专家人类完成时间估计达 **40–400 小时/任务**。团队在 13 种"Agent-模型"配置下做了 **1,300 次真实 rollout**（平均每次约 27.2M token，最长达 877.4M），结果显示所有配置 **pass@1 均低于 30%**。此外有 **13.8% 的 rollout 出现奖励作弊行为**（经多层防御后 0 例成功获奖），揭示超长程软件工作不仅是能力挑战，更是**基准完整性（benchmark integrity）** 挑战。
+
+---
+
+### 32. OmniCode
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | OmniCode: A Benchmark for Evaluating Software Engineering Agents |
+| **作者** | Atharv Sonwane, Eng-Shen Tu, Wei-Chung Lu, ..., Kevin Ellis, Saikat Dutta (14 位作者) |
+| **发表** | 2026.02 |
+| **链接** | [arXiv](https://arxiv.org/abs/2602.02262) |
+
+**简介：** OmniCode 针对 HumanEval、SWE-bench 等基准"任务类别过窄（聚焦竞赛编程或补丁生成）"的问题，构建了一个**更广泛、更多样化**的软件工程评测基准，包含 **1,794 个任务**，覆盖 **Python、Java、C++** 三种语言、**4 类任务**：Bug 修复、测试生成、代码评审修复、代码风格修复。所有任务经人工验证以排除定义不清的问题，并通过"从有限真实数据合成多样化任务"的新框架来**避免数据泄露**。实验（以 SWE-Agent 等框架）发现：现有 Agent 在 Python Bug 修复上表现尚可，但在**测试生成**任务及 **C++/Java** 上明显薄弱——SWE-Agent + DeepSeek-V3.1 在 C++ 测试生成上最高仅 25.0%。
+
+---
+
+### 33. FullStack-Agent
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and Repository Back-Translation |
+| **发表** | 2026.02 |
+| **链接** | [arXiv](https://arxiv.org/abs/2602.03798) \| [Code](https://github.com/mnluzimu/FullStack-Agent) |
+
+**简介：** FullStack-Agent 指出现有代码 Agent 与基准大多只覆盖**前端生成**，而真实的**全栈 Web 开发**需要同时处理前端、后端逻辑与状态管理，二者本质不同。该工作提出了一个统一的全栈 agentic 编码系统，含三部分：**FullStack-Dev**（多 Agent 全栈生成框架）、**面向开发的迭代测试（development-oriented testing）** 与**仓库回译（repository back-translation）** 数据合成方法，并配套评测协助非专家用户开发复杂交互式网站的能力。它填补了"全栈"这一被现有基准忽视的评测与训练维度。
+
+---
+
+### 34. Vision2Web
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | Vision2Web: A Hierarchical Benchmark for Visual Website Development with Agent Verification |
+| **作者** | Zehai He, Wenyi Hong, Zhen Yang, Ziyang Pan, Mingdao Liu, Xiaotao Gu, Jie Tang |
+| **机构** | Zhipu AI (zai-org) |
+| **发表** | 2026.03（ICML 2026 Spotlight） |
+| **链接** | [arXiv](https://arxiv.org/abs/2603.26648) \| [Code](https://github.com/zai-org/Vision2Web) |
+
+**简介：** Vision2Web 是**首个评估多模态编码 Agent 端到端视觉网站开发**的分层基准，覆盖完整软件开发生命周期。它将任务分为三个递进层级——**Level 1 静态网页**（UI 原型→响应式网页，100 个）、**Level 2 交互式前端**（多页面+导航流，66 个）、**Level 3 全栈网站**（含状态管理与后端逻辑，27 个），共 **193 个任务、918 张原型图、1,255 个功能测试**，覆盖电商/SaaS/内容/公共服务 4 大领域。其创新在于**基于工作流的 Agent 验证范式**：用 GUI Agent 验证器（Claude Code + playwright-cli）驱动应用执行测试用例（Pass/Fail/Blocked），并用 VLM 评判器对比原型与实际截图，实现与实现方式无关的可扩展评估。
+
+---
+
+### 35. c-CRAB
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | Code Review Agent Benchmark |
+| **作者** | Yuntong Zhang, Zhiyuan Pan, Imam Nur Bani Yusuf, Haifeng Ruan, Ridwan Shariffdeen, Abhik Roychoudhury |
+| **机构** | National University of Singapore（推测） |
+| **发表** | 2026.03 |
+| **链接** | [arXiv](https://arxiv.org/abs/2603.23448) |
+
+**简介：** c-CRAB（读作 "see-crab"）是面向 **AI 代码审查 Agent** 的基准，从真实**人类审查（human reviews）** 系统性构造数据集：针对某个 PR 的人类审查意见，自动生成对应的**可执行测试**，作为 held-out 测试套件来充当审查质量的"质量门（quality gate）"——即用测试来客观判断 Agent 生成的审查是否真正命中了人类关注的问题。评测对象涵盖开源的 PR-agent 以及 Devin、Claude Code、Codex 等商业审查 Agent。主要发现：**现有审查 Agent 合在一起也仅能解决约 40% 的 c-CRAB 任务**，且 Agent 审查常关注与人类不同的方面，暗示了未来"人机协作审查"的潜力。
+
+---
+
+### 36. SWE-PRBench
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | SWE-PRBench: Benchmarking AI Code Review Quality Against Pull Request Feedback |
+| **作者** | Deepak Kumar |
+| **发表** | 2026.03 |
+| **链接** | [arXiv](https://arxiv.org/abs/2603.26130) |
+
+**简介：** SWE-PRBench 关注 **AI 代码审查质量** 的评测，包含 **350 个带人工标注真实标签的 PR**（从 700 个候选经"仓库质量评分"筛选）。它提供了一个经验证的 **LLM-as-judge 评估框架**（与人类一致性 kappa=0.75），并设计三种冻结上下文配置（仅 diff / diff+文件 / 完整结构化上下文）做系统消融。关键发现极具反直觉：在 diff-only 配置下 8 个前沿模型仅能检测出人类标记问题的 **15%–31%**；更重要的是**上下文越多反而越差**——所有模型从"仅 diff"到"完整上下文"性能**单调下降**，主因是长上下文的注意力稀释导致"上下文相关问题"检测崩溃。一个 2,000-token 的"diff+摘要"提示反而优于 2,500-token 的完整上下文提示。
+
+---
+
+### 37. Beyond Isolated Tasks
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | Beyond Isolated Tasks: A Framework for Evaluating Coding Agents on Sequential Software Evolution |
+| **作者** | KN Ajay Shastry, Ganesh Senrayan, Shrey Satapara, Pranoy Panda, Chaitanya Devaguptapu |
+| **发表** | 2026.04 |
+| **链接** | [arXiv](https://arxiv.org/abs/2604.03035) |
+
+**简介：** 该工作指出现有 Coding Agent 基准都在**孤立、无状态（stateless）的单个 PR 任务**上评测，无法刻画真实软件开发"连续演化"的本质。它提出一个面向**序列化软件演化（sequential software evolution）** 的评测框架，将多个相互依赖的 PR 任务串联为有状态序列，让 Agent 在前序变更累积的代码库上持续工作，并引入技术债（technical debt）、代码质量（SonarQube/SQALE 等）等维度衡量演化过程中的代码质量，而非仅看单次任务是否通过。它与 BeyondSWE、SWE-EVO 共同代表了 2026 年"从单点修复走向持续演化"的评测趋势。
+
+---
+
+### 38. SWE-EVO
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | SWE-EVO: Benchmarking Coding Agents in Long-Horizon Software Evolution Scenarios |
+| **作者** | Tue Le, Minh V. T. Thai, Dung Nguyen Manh, Huy Phan Nhat, Nghi D. Q. Bui |
+| **发表** | 2025.12（v1）；2026 多次修订 |
+| **链接** | [arXiv](https://arxiv.org/abs/2512.18470) \| [Code](https://github.com/SWE-EVO/SWE-EVO) |
+
+**简介：** SWE-EVO 聚焦**长程软件演化（long-horizon software evolution）**——区别于 SWE-bench"解决单个 issue、产出一个补丁"，它要求 Agent 理解高层级需求、跨多文件协调改动、在多轮迭代中演化代码库并保持原有功能。基准从 **7 个成熟开源 Python 项目的发布说明（release notes）** 构建，含 **48 个任务**，每个任务平均涉及修改 **21 个文件**、用约 **874 个测试**验证。实验显示巨大能力落差：GPT-5.4 + OpenHands 在 SWE-EVO 上仅 **25%**，而 SWE-bench Verified 上前沿模型已达 72.8%。论文还提出 **Fix Rate** 指标衡量复杂长程任务上的部分进展。
+
+---
+
+### 39. SWE-Explore
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | SWE-Explore: Benchmarking How Coding Agents Explore Repositories |
+| **作者** | Shaoqiu Zhang, Yuhang Wang, Jialiang Liang, Yuling Shi, et al. (11 位作者) |
+| **发表** | 2026.06 |
+| **链接** | [arXiv](https://arxiv.org/abs/2606.07297) \| [Code](https://github.com/Qiushao-E/SWE-Explore-Bench) |
+
+**简介：** SWE-Explore 把评测焦点从"最终能否修复"细分到 SWE-bench 忽略的**仓库探索（repository exploration）** 这一关键中间能力——即仓库理解、上下文检索、代码定位、缺陷诊断。基准含 **848 个 issue**，覆盖 **10 种编程语言、203 个仓库**；任务要求探索器在固定的**行数预算**下返回按相关性排序的代码区域列表，其**行级 ground truth** 从成功解决同一 issue 的 Agent 轨迹中提取实际查阅过的代码区域得到。从覆盖率、排序质量、上下文效率三个维度评估，发现探索指标与下游修复行为强相关，且 agentic 探索器明显优于经典检索方法；文件级定位已较强，但**行级覆盖与高效排序**仍是区分 SOTA 的关键。
+
+---
+
+### 40. Dialogue SWE-Bench
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | Dialogue SWE-Bench: A Benchmark for Dialogue-Driven Coding Agents |
+| **作者** | Brendan King, Jeffrey Flanigan |
+| **发表** | 2026.06 |
+| **链接** | [arXiv](https://arxiv.org/abs/2606.13995) |
+
+**简介：** Dialogue SWE-Bench 指出现有基准把编码 Agent 当作**全自主系统**评测，与其在实践中**交互式（对话式）** 被使用的真实场景脱节。该基准评估编码 Agent **通过与用户多轮对话**解决真实软件工程问题的能力，配套设计了**基于人物角色的用户模拟器（persona-grounded user simulator）** 与**对话质量的自动评估**机制，并提出 **schema-guided agent** 来提升现成 Agent 的对话能力（较强基线提升 3–14%）。一个重要发现是：**更强的编码模型不一定是更强的对话模型**，说明"对话能力"是编码 Agent 中一个独立且当前研究不足的维度。
+
+---
+
+### 41. Saving SWE-Bench
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | Saving SWE-Bench: A Benchmark Mutation Approach for Realistic Agent Evaluation |
+| **作者** | Spandan Garg, Benjamin Steenhoek, Yufan Huang |
+| **机构** | Microsoft（推测） |
+| **发表** | 2025.10（CAIN 2026） |
+| **链接** | [arXiv](https://arxiv.org/abs/2510.08996) |
+
+**简介：** 该工作提出**基准变异（Benchmark Mutation）** 框架，针对一个核心问题：SWE-bench Verified 等基准的任务来自 GitHub issue，无法反映开发者在 IDE 中与**聊天式编码助手**的真实交互方式。方法通过分析流行聊天 Agent 的**遥测数据**，将正式的 issue 描述系统性转换为**真实用户风格的查询**，并可扩展到其他基准。应用于 SWE-bench Verified、Multi-SWE-bench TypeScript 子集与私有 SWE-bench C# 后发现：现有基准会**系统性高估** Agent 在真实场景（尤其 bug 修复）的能力——公开基准上部分模型被高估 **超过 50%**，内部基准约 10%–16%。为评测交互式聊天型软件工程 Agent 建立了新方法论。
+
+---
+
+### 42. SecureAgentBench
+
+| 项目 | 信息 |
+|------|------|
+| **论文** | SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios |
+| **发表** | 2025.09 |
+| **链接** | [arXiv](https://arxiv.org/abs/2509.22097) |
+
+**简介：** SecureAgentBench 关注代码 Agent 在自动化测试、调试、修复过程中被忽视的**安全风险**维度。它是一个含 **105 个编码任务**的基准，在贴近真实的漏洞场景下严格评估代码 Agent 的**安全代码生成（secure code generation）** 能力，评测涵盖修复任务、概念验证（PoC）漏洞利用，以及用静态分析检测新引入的漏洞。团队评估了 SWE-agent、OpenHands 等代表性 Agent，揭示了当前 Agent 在"完成功能的同时保证代码安全"方面的显著不足——即功能正确性与安全性之间存在尚未弥合的差距。
+
+---
+
 ## 时间线
 
 ```
@@ -551,9 +782,14 @@ SWE-Bench 系列 Benchmark 生态
 2025.05 ──── SWE-bench-Live (动态更新)
 2025.06 ──── SWE-Flow | UTBoost | SWE-Bench Illusion | SWE-Factory | SWE-Bench-CL
 2025.07 ──── SPICE | NoCode-bench | SWE-Perf
-2025.09 ──── SWE-QA | LoCoBench | SWE-Bench Pro
-2025.10 ──── EnConda-Bench
+2025.09 ──── SWE-QA | LoCoBench | SWE-Bench Pro | SecureAgentBench
+2025.10 ──── EnConda-Bench | Saving SWE-Bench
 2025.11 ──── SWE-Compass (统一评测)
+2025.12 ──── SWE-EVO (长程软件演化)
+2026.02 ──── OmniCode (多任务多语言) | FullStack-Agent (全栈)
+2026.03 ──── BeyondSWE | PostTrainBench | Vision2Web | c-CRAB | SWE-PRBench
+2026.04 ──── Beyond Isolated Tasks (序列化演化)
+2026.06 ──── SWE-Marathon | SWE-Explore | Dialogue SWE-Bench ｜ FrontierSWE (2026)
 ```
 
 ---
@@ -567,6 +803,13 @@ SWE-Bench 系列 Benchmark 生态
 5. **从评测到训练**：SWE-bench → SWE-Gym / R2E-Gym / SWE-smith / SWE-Flow / SWE-Factory
 6. **从乐观到审慎**：SWE-bench → SWE-Bench+ / UTBoost / SWE-Bench Illusion (数据泄露与评测有效性质疑)
 7. **从简单到高难度**：SWE-bench → SWE-Bench Pro (企业级长周期任务)
+8. **从局部到全局**：SWE-bench → BeyondSWE (跨仓库 + 外部知识 + 全代码库迁移)
+9. **从小时级到超长程**：SWE-Bench Pro → SWE-Marathon / FrontierSWE / SWE-EVO / Beyond Isolated Tasks (项目级、持续演化、pass@1 < 30%)
+10. **从写代码到自动化研发**：SWE-bench → PostTrainBench (Agent 自主完成 LLM 后训练)
+11. **新风险——奖励作弊与基准完整性**：超长程/自动化任务中 Agent 出现 reward hacking（测试集训练、下载现成检查点、滥用密钥），评测需配套对抗性审计与沙箱隔离（PostTrainBench、SWE-Marathon）
+12. **从"解决"到"审查/探索/对话"**：评测维度向真实开发流程细分——代码审查（c-CRAB、SWE-PRBench）、仓库探索与定位（SWE-Explore）、对话驱动交互（Dialogue SWE-Bench）、全栈与视觉网站开发（FullStack-Agent、Vision2Web）
+13. **从能力到安全**：SWE-bench → SecureAgentBench (在真实漏洞场景下评估"安全代码生成"，功能正确 ≠ 安全)
+14. **从静态题目到真实场景对齐**：Saving SWE-Bench 通过"基准变异"把 GitHub issue 转为真实用户查询，揭示现有基准对真实交互能力的系统性高估
 
 ---
 
